@@ -1,68 +1,41 @@
-Hand Gesture Control with OpenCV and MediaPipe
-This project enables volume control and mouse control using hand gestures captured via webcam. It uses MediaPipe for hand tracking, OpenCV for computer vision, pyautogui for controlling mouse/volume, and Tkinter for the UI.
+# 🤚 Hand Gesture Control using OpenCV and MediaPipe
 
-Features
-📢 Volume Control
-Use the distance between your index finger and thumb to adjust system volume:
+A Python project that allows you to control your **system volume** and **mouse pointer** using **hand gestures** via webcam. Built with **OpenCV**, **MediaPipe**, **PyAutoGUI**, and **Tkinter**.
 
-Increase Volume: Fingers far apart.
+## 🧠 Features
 
-Decrease Volume: Fingers close together.
+- 🎚️ **Volume Control**  
+  Control system volume by measuring the distance between your **thumb** and **index finger**:
+  - Fingers far apart → Volume Up 🔊
+  - Fingers close together → Volume Down 🔉
 
-🖱️ Mouse Control
-Use your index finger to move the mouse.
-Tap your thumb and index finger together to click.
+- 🖱️ **Mouse Control**  
+  Control the mouse using your **index finger** as a pointer:
+  - Move the cursor by moving your finger
+  - Click by bringing the **thumb and index finger** close together
 
-Requirements
-Python 3.x
+## 🛠️ Tech Stack
 
-OpenCV
+- [OpenCV](https://opencv.org/) – for video capture and drawing
+- [MediaPipe](https://mediapipe.dev/) – for hand tracking
+- [PyAutoGUI](https://pyautogui.readthedocs.io/) – for automating keyboard/mouse
+- [Tkinter](https://docs.python.org/3/library/tkinter.html) – for simple GUI
 
-MediaPipe
+## 📦 Installation
 
-PyAutoGUI
+1. Clone the repository:
 
-Tkinter (usually pre-installed with Python)
+   ```bash
+   git clone https://github.com/yourusername/hand-gesture-control.git
+   cd hand-gesture-control
+2. Install dependencies:
+  pip install opencv-python mediapipe pyautogui
 
-Install dependencies using:
+3. How to Run:
+   python hand_control.py
+   
+A GUI will appear with two buttons:
+              Start Volume Control
+              Start Mouse Control
+              Press Esc to exit any mode.
 
-bash
-Copy
-Edit
-pip install opencv-python mediapipe pyautogui
-How to Run
-Save the script as hand_control.py.
-
-Run the script:
-
-bash
-Copy
-Edit
-python hand_control.py
-A simple GUI will appear with two options:
-
-Start Volume Control
-
-Start Mouse Control
-
-Select the desired control mode. Press Esc to exit.
-
-File Structure
-bash
-Copy
-Edit
-hand_control.py    # Main Python script
-README.md          # Project documentation
-How It Works
-Uses MediaPipe Hands to detect and track hand landmarks in real-time.
-
-Measures the distance between key landmarks (thumb and index finger) to trigger system actions.
-
-Uses pyautogui to simulate keyboard and mouse events.
-
-Known Limitations
-Works best in good lighting conditions.
-
-May not support all OS volume systems equally (optimized for Windows/macOS).
-
-Gesture accuracy depends on webcam quality and hand visibility.
